@@ -4,7 +4,6 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Router, useRouterHistory, applyRouterMiddleware } from "react-router"
 import createBrowserHistory from "history/lib/createBrowserHistory"
-import useScroll from "react-router-scroll/lib/useScroll"
 import { Provider as ReduxContextProvider } from "react-redux"
 
 import PhenomicContextProvider from "../components/ContextProvider"
@@ -43,7 +42,6 @@ export default function phenomic({
         <Router
           history={ browserHistory }
           routes={ routes }
-          render={ applyRouterMiddleware(useScroll(shouldUpdateScroll)) }
         />
       </ReduxContextProvider>
     </PhenomicContextProvider>,
